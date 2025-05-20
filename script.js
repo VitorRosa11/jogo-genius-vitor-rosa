@@ -107,7 +107,7 @@ function tocarSomErro(){
 }
 
 function tocarSomRodadaVencida() {
-  const rodada = new Audio("sons/mixkit-winning-a-coin-video-game-2069.wav");
+  const rodada = new Audio("sons/mixkit-arcade-bonus-alert-767.wav");
   rodada.play();
 }
 
