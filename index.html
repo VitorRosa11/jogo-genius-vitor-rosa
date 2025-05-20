@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jogo Genius - Vitor Rosa</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+
+<body>
+  <h1>Genius</h1>
+
+  <div id="nivel">Rodada 1</div>
+  <div id="mensagem">Clique em "iniciar jogo"</div>
+
+  <!-- ONDA TOPO -->
+<div class="onda-topo">
+  <svg viewBox="0 0 1440 150" preserveAspectRatio="none">
+    <path fill="#111" d="M0,64L80,85.3C160,107,320,149,480,160C640,171,800,149,960,122.7C1120,96,1280,64,1360,48L1440,32V0H0Z"></path>
+  </svg>
+</div>
+
+
+  <div class="disco">
+    <div class="grid-botoes">
+      <button class="cor" id="vermelho" data-cor="vermelho"></button>
+      <button class="cor" id="verde" data-cor="verde"></button>
+      <button class="cor" id="amarelo" data-cor="amarelo"></button>
+      <button class="cor" id="azul" data-cor="azul"></button>
+    </div>
+    <button id="btnIniciar">Iniciar Jogo</button>
+  </div>
+
+  <!-- ONDA FUNDO -->
+<div class="onda-fundo">
+  <svg viewBox="0 0 1440 150" preserveAspectRatio="none">
+    <path fill="#111" d="M0,96L60,101.3C120,107,240,117,360,117.3C480,117,600,107,720,90.7C840,75,960,53,1080,42.7C1200,32,1320,32,1380,32L1440,32V150H0Z"></path>
+  </svg>
+</div>
+
+
+
+  <script src="script.js"></script>
+</body>
+</html>

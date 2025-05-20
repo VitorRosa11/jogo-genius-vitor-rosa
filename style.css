@@ -1,0 +1,214 @@
+body {
+   margin: 0;
+  padding: 0;
+  height: 100vh;
+  background: linear-gradient(rgb(75, 125, 232), rgb(113, 171, 233));
+  color: #111;
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+
+}
+
+
+
+
+h1 {
+ 
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 3rem;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  background: linear-gradient(90deg, red, yellow, green, blue);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: animarCores 5s linear infinite;
+  letter-spacing: 2px;
+  margin: 20px 0 10px;
+  font-family: 'Orbitron', sans-serif;
+  text-transform: uppercase;
+  font-size: 3.5rem;
+  color: #eee;
+  text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.1);
+   text-shadow:
+    0 0 5px rgba(255,255,255,0.2),
+    0 0 10px rgba(255,255,255,0.1);
+}
+
+@keyframes animarCores {
+  0% { background-position: 0% }
+  100% { background-position: 100% }
+}
+
+#nivel {
+  
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+   font-weight: bold;
+  font-size: 1.5rem;
+  margin-bottom: 0;
+  color: #fff;
+  background: linear-gradient(to right, #28ef38, #278a1a);
+  padding: 10px 30px;
+  border-radius: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  text-shadow: 8px 8px 8px rgba(0,0,0,0.5);
+   display: inline-block;
+  
+}
+#mensagem {
+  font-family: monospace;
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+  font-style: italic;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 8px 16px;
+  border-radius: 8px;
+  backdrop-filter: blur(3px);
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+}
+
+
+.cor {
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  width: 100%;
+  height: 100%;
+}
+
+.cor:active {
+  transform: scale(0.95);
+}
+
+/* Cores específicas */
+#vermelho {
+  background: linear-gradient(#800000, #d01818, #ef3c3c);
+  border: none;
+}
+
+#verde {
+  background: linear-gradient(#054f05, #0c780c, #18a418);
+}
+
+#amarelo {
+  background: linear-gradient(#c5c548, #ffff00, #ffff75);
+}
+
+#azul {
+  background: linear-gradient(#010175, #050598, blue);
+}
+
+#btnIniciar {
+  position: absolute;
+   transform: translate(-50%, -50%);
+  justify-content: center;
+  top: 50%;
+  left: 50%;
+  width: 160px;
+  height: 50px;
+  background-color: gray;
+  color: black;
+  font-size: 1.rem;
+  font-family: monospace;
+  font-weight: bold;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  z-index: 10;
+  animation: pulse 1.2s infinite ease-in-out;
+}
+
+#btnIniciar:active {
+   box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+  background-color: #555;
+}
+#btnIniciar.pulsando {
+  animation: pulseBtn 1.5s infinite ease-in-out;
+  box-shadow: 0 0 0 0 rgba(255,255,255,0.7);
+}
+
+@keyframes pulseBtn {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255,255,255,0.6);
+  }
+  70% {
+    box-shadow: 0 0 0 15px rgba(255,255,255,0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255,255,255,0);
+  }
+}
+
+
+
+
+.ativa {
+  filter: brightness(1.5);
+  box-shadow: 0 0 20px white;
+}
+
+
+.disco {
+  position: relative;
+  width: 600px;
+  height: 600px;
+  background-color: #000000;
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgb(14, 13, 13);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+   border: 20px solid #ccc;
+   background: radial-gradient(circle at 30% 30%, #2a2a2a, #111);
+ 
+}
+
+.grid-botoes {
+  display: grid;
+  grid-template-columns: 200px 200px;
+  grid-template-rows: 200px 200px;
+  gap: 15px;
+}
+
+.onda-topo, .onda-fundo {
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.onda-topo svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  transform: rotate(180deg); /* faz a curva descer */
+  z-index: -1;
+}
+
+.onda-fundo svg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  z-index: -1;
+}
+
+.disco.ativo {
+  animation: pulsarDisco 1s ease;
+}
+
+@keyframes pulsarDisco {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.03); }
+  100% { transform: scale(1); }
+}
+
+
+
+
