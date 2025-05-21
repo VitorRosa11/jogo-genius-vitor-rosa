@@ -2,9 +2,6 @@ const mensagem = document.getElementById("mensagem");
 const cores = ["vermelho", "verde", "amarelo", "azul"];
 let esperandoJogada = false;
 
-
-
-
 let sequenciaJogo = [];
 let sequenciaJogador = [];
 let nivel = 0;
@@ -89,7 +86,7 @@ function verificarClique(corClicada){
   mensagem.textContent = `✔️ Clique ${sequenciaJogador.length} de ${sequenciaJogo.length}`;
 
   if (sequenciaJogador.length === sequenciaJogo.length) {
-    if (nivel === 7) {
+    if (nivel === 15) {
       tocarSomVitoria();
       mensagem.textContent = "🏆 Você venceu o jogo!";
       setTimeout(() => iniciarJogo(), 3000);
