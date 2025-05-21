@@ -62,7 +62,7 @@ function animarCor(cor){
 function tocarSom(cor){
     let som;
     if(cor === "vermelho"){
-        som = new Audio ("");
+        som = new Audio ("sons/mixkit-confirmation-tone-2867.wav");
     } else if(cor === "verde"){
         som = new Audio ("sons/mixkit-correct-positive-notification-957.wav");
     } else if (cor === "amarelo"){
