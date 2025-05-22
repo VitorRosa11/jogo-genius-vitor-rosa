@@ -86,7 +86,7 @@ function verificarClique(corClicada){
   mensagem.textContent = `✔️ Clique ${sequenciaJogador.length} de ${sequenciaJogo.length}`;
 
   if (sequenciaJogador.length === sequenciaJogo.length) {
-    if (nivel === 20) {
+    if (nivel === 15) {
       tocarSomVitoria();
       mensagem.textContent = "🏆 Você venceu o jogo!";
       setTimeout(() => iniciarJogo(), 3000);
