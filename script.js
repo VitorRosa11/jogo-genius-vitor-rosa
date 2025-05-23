@@ -1,9 +1,6 @@
 const mensagem = document.getElementById("mensagem");
 const cores = ["vermelho", "verde", "amarelo", "azul"];
 let esperandoJogada = false;
-const modal = document.getElementById("modal");
-const btnSim = document.getElementById("btnSim");
-const btnNao = document.getElementById("btnNao");
 
 let sequenciaJogo = [];
 let sequenciaJogador = [];
@@ -89,17 +86,10 @@ function verificarClique(corClicada){
   mensagem.textContent = `✔️ Clique ${sequenciaJogador.length} de ${sequenciaJogo.length}`;
 
   if (sequenciaJogador.length === sequenciaJogo.length) {
-    if (nivel === 3) {
-      setTimeout(() => {
-        const jogarNovamente = confirm("🏆 Você venceu! Deseja jogar novamente?");
-        abrirModal();
-        if (jogarNovamente) {
-            iniciarJogo();
-        } else {
-            mensagem.textContent = "👍 Obrigado por jogar!";
-            placar.textContent = "Jogo finalizado";
-        }
-    }, 1000);
+    if (nivel === 15) {
+     tocarSomVitoria();
+    mensagem.textContent = "🏆 Você venceu o jogo!";
+    setTimeout(() => iniciarJogo(), 3000);
 }
     else {
       tocarSomRodadaVencida();
@@ -108,21 +98,6 @@ function verificarClique(corClicada){
     }
   }
 }
-
-function abrirModal() {
-    modal.style.display = "flex";
-}
-
-btnSim.addEventListener("click", () => {
-    modal.style.display = "none";
-    iniciarJogo();
-});
-
-btnNao.addEventListener("click", () => {
-    modal.style.display = "none";
-    mensagem.textContent = "👍 Obrigado por jogar!";
-    placar.textContent = "Jogo finalizado";
-});
 
 
 function tocarSomErro(){
