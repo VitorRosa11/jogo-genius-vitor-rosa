@@ -14,6 +14,13 @@ body {
   position: relative;
 
 }
+.topo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
 
 h1 {
  
@@ -172,8 +179,8 @@ h1 {
 
 .grid-botoes {
   display: grid;
-  grid-template-columns: 180px 180px;
-  grid-template-rows: 180px 180px;
+  grid-template-columns: repeat(2, minmax(170px, 1fr));
+  grid-template-rows: repeat(2, minmax(170px, 1fr));
   gap: 5px;
   
 }
@@ -214,14 +221,27 @@ h1 {
   100% { transform: scale(1); }
 }
 
+
+
 @media (max-width: 700px) {
-  .disco {
+
+    .disco {
     width: 300px;
     height: 400px;
   }
+  .topo {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
 
   .grid-botoes {
-    gap: 1px;
+     gap: 1px;
+    display: grid;
+    
    
   }
 
@@ -232,10 +252,12 @@ h1 {
   }
 
   h1 {
-    font-size: 2rem;
+    font-size: 2em;
     margin-top: 10px;
     text-align: center;
     align-items: center;
+    
+    
   }
 
   #nivel, #mensagem {
@@ -243,6 +265,8 @@ h1 {
     padding: 5px 10px;
     text-align: center;
     align-items: center;
+    
+    
   }
 }
 
